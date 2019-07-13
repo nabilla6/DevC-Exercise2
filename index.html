@@ -1,11 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <title>Exercise 2</title>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>LATIHAN 2</title>
+    </head>
+  <body>
+    
+    <div class="header">
+        <center>
+            <h1 class="h1-header">KALKULATOR</h1>
+        </center>
+    </div>
+    
 </head>
 <body>
-    <center>
-        <h1>Kalkulator</h1>
-    </center>
+    <div class="name">
+        <center>
+            <h4>Masukkan Angka 1: </h4>
+        <input type="text" id="bilangan1"/>
+        <h4>Masukkan Angka 2: </h4>
+        <input type="text" id="bilangan2"/>
+
+        <h4>Hasil: </h4>
+        <div class="cetak">
+            <h4 id="hasil"></h4>
+        </div>
+        </center>
+        
+        <div>
+            <center>  
+                <button type="button" class="btn btn-outline-success"onclick=tambah(bilangan1.value,bilangan2.value)>tambah</button>
+                <button type="button" class="btn btn-outline-danger"onclick=kurang(bilangan1.value,bilangan2.value)>kurang</button>
+                <button type="button" class="btn btn-outline-warning"onclick=bagi(bilangan1.value,bilangan2.value)>bagi</button>
+                <button type="button" class="btn btn-outline-dark"onclick=kali(bilangan1.value,bilangan2.value)>kali</button>
+            </center>
+        </div>
+        
+    </div>
+
+    <script>
+      function tambah(val1,val2){
+          var hasil;
+          hasil=parseInt(val1)+parseInt(val2);
+
+          document.getElementById("hasil").innerHTML=hasil;
+          console.log(hasil);
+      }
+
+      function kurang(val1,val2){
+          var hasil;
+          hasil=parseInt(val1)-parseInt(val2);
+
+          document.getElementById("hasil").innerHTML=hasil;
+          console.log(hasil);
+      }
+
+      function bagi(val1,val2){
+          var hasil;
+          hasil=parseInt(val1)/parseInt(val2);
+
+          document.getElementById("hasil").innerHTML=hasil;
+          console.log(hasil);
+      }
+
+      function kali(val1,val2){
+          var hasil;
+          hasil=parseInt(val1)*parseInt(val2);
+
+          document.getElementById("hasil").innerHTML=hasil;
+          console.log(hasil);
+      }
+    </script>
+        <div class="progress" style="margin-top: 297px;">
+            <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
 </body>
 </html>

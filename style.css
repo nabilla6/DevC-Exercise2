@@ -1,0 +1,9 @@
+body{
+    background-color: aliceblue;
+}
+.cetak{
+    width: 200px;
+    height: 35px;
+    border: 2px solid black;
+    margin: 2px 0 15px 0;
+}
